@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Flatiron | Josh's Flatiron Blog]]></title>
+  <link href="http://joshuadbaker.github.io/blog/categories/flatiron/atom.xml" rel="self"/>
+  <link href="http://joshuadbaker.github.io/"/>
+  <updated>2015-04-05T18:51:28-04:00</updated>
+  <id>http://joshuadbaker.github.io/</id>
+  <author>
+    <name><![CDATA[Josh Baker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My First Post on Octopress]]></title>
+    <link href="http://joshuadbaker.github.io/blog/2015/04/05/my-first-post-on-octopress/"/>
+    <updated>2015-04-05T18:49:18-04:00</updated>
+    <id>http://joshuadbaker.github.io/blog/2015/04/05/my-first-post-on-octopress</id>
+    <content type="html"><![CDATA[<p>Hello World!</p>
+]]></content>
+  </entry>
+  
+</feed>
