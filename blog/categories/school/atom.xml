@@ -4,7 +4,7 @@
   <title><![CDATA[Category: School | Josh's Flatiron Blog]]></title>
   <link href="http://joshuadbaker.github.io/blog/categories/school/atom.xml" rel="self"/>
   <link href="http://joshuadbaker.github.io/"/>
-  <updated>2015-04-15T08:57:48-04:00</updated>
+  <updated>2015-04-28T09:21:41-04:00</updated>
   <id>http://joshuadbaker.github.io/</id>
   <author>
     <name><![CDATA[Josh Baker]]></name>
@@ -36,11 +36,11 @@
 
 <p>Think of the next method as more of a very useful comment in your code left by some long forgotten(except at the Flatiron School) Neckbeard who would sound like Gandalf if he spoke through the comments on the page.  What is this old Neckbeard telling us to do?  “READ THE DOCUMENTATION!  BECOME FAMILIAR WITH THE CLASS METHODS!  IN MY DAY WE DIDN’T HAVE THESE…WE WROTE THEM OURSELVES…IN LISP…WITH LOTS OF PARENTHESIS!!!”</p>
 
-<p><img src="../blog_images/ruby_docs_meme.jpg"></p>
+<p><img src="ruby_docs_meme.jpg"></p>
 
 <p>Finally, the last method we shall call is a very special one as it actually connects to a very new and special form of JSON and AJAX.  Through this simple little method called talk_to_teammates, we’ve actually devised a way to activate the human voice so that people can interact with one another(have no fear you can still use a phone, there’s a free app that works like Yo).  Some hackers even, in what will be a never ending debate of proper method names, refer to this method as the collaborate_with_teammates method.  Yes, I know that sounds a little too radical and there is no Yo-like app yet, but  you may decide for yourself which you prefer.  WARNING!  Just know this method dabbles in the dark arts and lives in the deep recesses of 16 bit integer caves where only tiny little unix based organisms known as regular expressions survive without light or food, well except for the Ramen they are fed by still living Neckbeards.</p>
 
-<p><img src="../blog_images/flatiron_method_2.jpg"></p>
+<p><img src="flatiron_method_2.jpg"></p>
 
 <p>My friends that about wraps up our discussion of the Flatiron Method.  It will be uploaded to GitHub for anyone to add onto or amend, but remember, please keep it simple, keep it concise, and above get it to work!  Happy coding and stay tuned for posts of a more technical nature in the future weeks!</p>
 ]]></content>
