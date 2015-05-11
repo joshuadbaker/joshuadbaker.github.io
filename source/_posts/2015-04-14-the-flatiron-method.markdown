@@ -1,0 +1,34 @@
+---
+layout: post
+title: "The Flatiron Method"
+date: 2015-04-14 22:52:20 -0400
+comments: true
+categories: "Flatiron School" 
+---
+
+As someone who is very new to coding and very right brained, I find myself often perplexed by the problems in front of me.  During labs, wanting those green lights to turn on, I can’t help but wish on occasion there was some special method…a Flatiron Method…to make lights go green!
+
+Imagine having one of these for those nasty pigeons that just won’t push into that darned array containing the hash with a value of yet one more hash key, value pair that finally leads to nested goodness for that darned…I mean precious little pigeon.  If only there was some magical method that just turned those lights green.  Well ladies and gentleman, for the ever so reasonable price of just $19.99, I present the Flatiron Method!  Jobs would be jealous of this amazing innovation in code that I debut today.  
+
+<img src="../blog_images/flatiron_method_1.jpg">
+
+Well, as we all know that just isn’t true.  Sorry to get anyone’s hopes up, but alas there is no magic method, except that there actually is.  The Flatiron Method does exist after all, we(I in particular) just have to use it.  What is this method I speak of?  
+
+First, recognize that the Flatiron Method actually consists of many smaller more manageable methods that are all organized by task so as not to cram too much code into one single method.  A well composed method must be organized, concise and only serve one purpose, executing its one instruction which in this case is delivering a green light.  While I’m always ready to jump at the keyboard and just start coding my little heart away coming up with random variables, conditionals, and now Classes, is this really how one should approach a complex problem?  Of course not.  
+
+The first method we will call in the Flatiron Method is the run_your_spec_in_bash method.  This of course is a very simple method with a very helpful optional condition we will throw in called —fail-fast.  After seeing the overall scope of your lab, reduce it to the first and only test spec you need to satisfy.  Call this method inside of your method as many times as necessary and if it makes you feel more comfortable throw it inside a while loop.
+
+The second method we will call inside of the FM is called the read_me_twice method which itself actually consists of two separate components, the first being the readme file which is called that for a reason hint hint and the second component is the spec.rb file which in particular often feels neglected and is just begging to be read to let you know when a ‘return’ or ‘puts’ is called for at the end of a given spec or a string output requires an exclamation point!  
+
+The third method we call is known as use_pry.  Very simple, but oh so powerful.  Inside of the pry method itself we see two components, the implicit return value, require ‘pry” which leads to more a more sophisticated gem, and the beloved jack of all trades, binding.pry.  Use this little swiss army knife of a method to plug into code anywhere you like and as often as desired…it’s free!  When this method gets called inside of the Flatiron_Method, it gives us a magnifying glass and a pause button to examine our code.  Yes that’s right, it actually PAUSES THE PROGRAM in the middle of all those nested pigeons so you can keep track of your keys and values!
+
+Think of the next method as more of a very useful comment in your code left by some long forgotten(except at the Flatiron School) Neckbeard who would sound like Gandalf if he spoke through the comments on the page.  What is this old Neckbeard telling us to do?  “READ THE DOCUMENTATION!  BECOME FAMILIAR WITH THE CLASS METHODS!  IN MY DAY WE DIDN’T HAVE THESE…WE WROTE THEM OURSELVES…IN LISP…WITH LOTS OF PARENTHESIS!!!”
+
+<img src="ruby_docs_meme.jpg">
+
+Finally, the last method we shall call is a very special one as it actually connects to a very new and special form of JSON and AJAX.  Through this simple little method called talk_to_teammates, we’ve actually devised a way to activate the human voice so that people can interact with one another(have no fear you can still use a phone, there’s a free app that works like Yo).  Some hackers even, in what will be a never ending debate of proper method names, refer to this method as the collaborate_with_teammates method.  Yes, I know that sounds a little too radical and there is no Yo-like app yet, but  you may decide for yourself which you prefer.  WARNING!  Just know this method dabbles in the dark arts and lives in the deep recesses of 16 bit integer caves where only tiny little unix based organisms known as regular expressions survive without light or food, well except for the Ramen they are fed by still living Neckbeards.
+
+<img src="flatiron_method_2.jpg">
+
+My friends that about wraps up our discussion of the Flatiron Method.  It will be uploaded to GitHub for anyone to add onto or amend, but remember, please keep it simple, keep it concise, and above get it to work!  Happy coding and stay tuned for posts of a more technical nature in the future weeks!
+
