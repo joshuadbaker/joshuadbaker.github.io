@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Web…What Is This !$@%ing Mess? - Josh&#8217;s Flatiron Blog</title>
+  <meta name="author" content="Josh Baker">
+
+  
+  <meta name="description" content="This past winter, I spent the last week of my Front End Web Dev course with Jon Grover going through a marathon of 7+ hours of video, learning &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://joshuadbaker.github.io/blog/2015/05/21/rails-v-javascript/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Josh's Flatiron Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Josh&#8217;s Flatiron Blog</a></h1>
+  
+    <h2>A place to learn, a place to grow.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="joshuadbaker.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The Web…What Is This !$@%ing Mess?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-05-21T21:24:36-04:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>9:24 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This past winter, I spent the last week of my Front End Web Dev course with Jon Grover going through a marathon of 7+ hours of video, learning Backbone JS.  I didn’t really understand much of what was going on and was just barely keeping up with the syntax wondering what the point of create, update, and destroy were and how to keep up with all those damn semicolons during the code along exercises. If only I knew then what I know now.  After Wednesday’s lab review, I think I am beginning to put the pieces together.</p>
+
+<p>First, let’s discuss what is going on between Ruby/Rails on the back end and the web browser/Javascript on the front end.  It’s like juggling  chainsaws keeping track of everything in a Rails app.  Throw in Javascript and jQuery in the browser on the front end and it’s like juggling chainsaws while trying to code along with Steven during a morning lecture!  After the lab review with Steven, I decided it was time to make a diagram of what is going on&hellip;</p>
+
+<iframe src="//giphy.com/embed/7jsnB2RRzDGIo?html5=true" width="480" height="259" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>Okay, maybe that&rsquo;s not the best description of what&rsquo;s going on, but hey, we&rsquo;re in project mode man.  Alright, all jokes aside, the diagram as promised:</p>
+
+<p><img src="/images/web_front_back.png"></p>
+
+<p>I think of the server and browser as being two separate containers holding completely unrelated content.  In the middle, is AJAX which functions like a bridge. On the bridge the only possible thing that can cross is a “string” we refer to as JSON.  Even though Javascript is in the acronym, JSON is still just a specifically formatted “string” that can be translated to various programming languages.  AJAX is the channel for passing the JSON through front end events(think mouse clicks) in the browser.</p>
+
+<p>When JSON is passed from the browser to the server, it gets converted in the Rails controller into params that can be read by the Rails action/methods.  Going the other way, the params get converted into Javascript object attributes by Rails through the ‘responds_to’ block.  The one key is to remember the entire time, this information is being passed through in the format of a “string”.</p>
+
+<p>Does that mean creating two sets of objects in models into separate containers?  Yes, yes it does.  I write JS I write Ruby at the same da…</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KBb4ZZY2W80" frameborder="0" allowfullscreen></iframe>
+
+
+<p>They&rsquo;ll probably never read this, but I gotta give a shoutout to my future coders and ALL of my former students from Parkway down in Miramar on the Dade County line.</p>
+
+<p>The database is probably the most important part of a dynamic web app and the database is organized as Ruby objects. Given that the only thing the server and browser containers can share is a simple “string”, both containers need their own objects to keep the app organized.   This dictates how the database will be presented in the browser.   Object oriented Javascript becomes the method for maintaining consistency across the bridge that is AJAX/JSON.</p>
+
+<p>If the objects get duplicated then the controllers must too.  Controllers with Post/Get internet actions, models/objects for organizing the data, and views for organizing how the data will be presented in HTML have to be created.  One area that I think is confusing is understanding how the erb files work on the internet.  The key to remember is that the browser only uses Javascript so the views must be a composite file of Ruby erb for the database, Javascript/jQuery for the browser, and HTML for markup of the pages.  It gets pretty crazy keeping track of 3 different languages in the file that a person visiting the site experiences as the entire web app!</p>
+
+<p>THIS, pun intended, can be very confusing.  Given how effective Rails is at abstracting away a lot of the clutter, why not do the same on the front end?  What if I told you…no just kidding.  I won’t go into too much detail in this blog post, but there is NO “what if I told you” in this blog post or in the real world.  I am still figuring all of this out for myself, but nonetheless there are several competing JS frameworks including Backbone, Ember, and Angular that attempt to reconcile the conflicts between Rails and the browser and follow the principles of conventions over configuration and RESTful paths.  When consideing which framework to choose, this comes to mind&hellip;</p>
+
+<iframe src="//giphy.com/embed/3GPbOod9GkC5i?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>&hellip;unfortunately there is no clear choice, only corgis&hellip;or cats&hellip;</p>
+
+<iframe src="//giphy.com/embed/40Fpxgn6Yq640?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>&hellip;and all these frameworks ultimately do the same thing, hence the confusion.</p>
+
+<p>Initially, I thought I’d stumbled onto the holy grail when I went back and reviewed my Backbone labs, but then I went back to my chart and realized there was a problem.  There is  only one view shared by both Rails and the browser!  There is no way to create separate views that detach the Ruby from the Javascript.  To say it succinctly, there is only one browser window and it is written in Javascript.  After doing further research on the internet about these frameworks, the whole situation becomes a lot more complicated.  There is no magical “what if I told you” moment for reconciling the conflicts between Rails and Javascript in the views, only lines on lines on lines of code&hellip;or racks&hellip;</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IcXxXz0XPt8" frameborder="0" allowfullscreen></iframe>
+
+
+<p>RACK UP!!</p>
+
+<p>There is only a range of options with various strengths and weaknesses based on need and personal preference.   I am beginning to see why at Flatiron we have not received a clear answer to our questions about which JS front end framework to use with Rails or if we even should use a JS framework with Rails.  In addition, I am also beginning to see why some developers just turn to Node and create an entire full stack JS web app.  Finally, I think I understand why Steven is so excited about Volt as it appears to abstract away JS entirely, letting Ruby covert to JS, a layer below the coding, while maintaining the consistency and elegance of Ruby on Rails.</p>
+
+<p>Till next time when I break down the choices on the front end, in honor of the end of labs and green lights, and it being Friday, I leave you with…</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o-AbEO6J8s0" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Peace out we in project mode!</p>
+
+<p>Octocats Rule!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Josh Baker</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-05-21T21:24:36-04:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>9:24 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://joshuadbaker.github.io/blog/2015/05/21/rails-v-javascript/" data-via="" data-counturl="http://joshuadbaker.github.io/blog/2015/05/21/rails-v-javascript/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/05/10/planning-matters/" title="Previous Post: Planning Matters">&laquo; Planning Matters</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/05/21/rails-v-javascript/">The Web…What Is This !$@%ing Mess?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/10/planning-matters/">Planning Matters</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/why-ruby-why-rails/">Why Ruby? Why Rails?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/14/the-flatiron-method/">The Flatiron Method</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/05/my-first-post-on-octopress/">My First Post on Octopress</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Josh Baker -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
