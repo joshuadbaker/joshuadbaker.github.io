@@ -9,7 +9,7 @@
   <meta name="author" content="Josh Baker">
 
   
-  <meta name="description" content="This past winter, I spent the last week of my Front End Web Dev course with Jon Grover going through a marathon of 7+ hours of video, learning &hellip;">
+  <meta name="description" content="AJAX. I’ve been thinking a lot about AJAX recently, trying to relate new discoveries in Rails back to my introduction to Backbone.js and more &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/06/04/ajax-forms/">AJAX Forms</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-06-04T08:43:13-04:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:43 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>AJAX.  I’ve been thinking a lot about AJAX recently, trying to relate new discoveries in Rails back to my introduction to Backbone.js and more recently, the excellent tech talk about Ember.</p>
+
+<p>The whole idea of calling a server and loading webpages repeatedly, feels so…2005.  It seems so much cleaner and more professional to make one request to a server to load the entire page and be done.  Pages have become incredibly complex and so much can happen on just one section of a page let alone the entire page.  Not to mention, mobile use is revolutionizing the entire concept of what our web experience is and the last thing we want as web developers is to limit our mobile users’ experiences.  In addition,  with what is already being done with WebGL and the canvas element in HTML5, I simply can’t imagine how much our web experience will change in the next 5 years.  Given this paradigm, it is absolutely imperative I embrace AJAX and all the possibilities it can provide for a more efficient and joyful web experience.  I have to face the facts, the web is getting more sophisticated, elegant, and abstracted.</p>
+
+<p>First, too quickly review, AJAX provides a channel for passing back and forth data from a web server without having to make additional calls to the server to reload the entire page.  Below is the chart I presented from my last post that provides a visual explanation of AJAX.</p>
+
+<p><img src="/images/web_front_back.png"></p>
+
+<p>Rails of course already integrates the use of AJAX into its framework and it is quite effective, especially in how it handles forms.  Without AJAX, if a form is filled out and the submit button is pressed, and event is fired off and a Post call is made to server which refreshes the entire page.  AJAX sends the information without refreshing the page.  In my case, for practice, I created a simple, very simple Rails app to try and get a form working in this new format.  Here is my controller:</p>
+
+<p><img src="/images/controller.png"></p>
+
+<p>In this form I tried a variation on the responds_to method placing it at the top of the controller so it affects each action.</p>
+
+<p>Next, I created an html.erb file that holds the mark up language for the page.  This page is pretty straight forward and holds the references for the JQuery.</p>
+
+<p><img src="/images/htmlerb.png"></p>
+
+<p>Next I created the js.erb files that integrate ruby/rails into js files to manipulate the forms on the page with toggle methods.</p>
+
+<p><img src="/images/newjserb.png"></p>
+
+<p><img src="/images/createjserb.png"></p>
+
+<p>These files are where the action takes place.  I feel like the js.erb file is where I need to spend more time learning how ruby integrates into javascript.</p>
+
+<p>Though I’ve tried to change and move different elements around I’m still not able to get the form to appear.  I’m really excited to figure this out though because integrating a Rails backend into an AJAX controlled front end will make for a dynamic and more sophisticated web site.</p>
+
+<p>One of my goals for my group’s project is to integrate some AJAX functionality into our web app to make it more efficient and user friendly.  I decided to experiment with some hidden forms after reading about them online.  The hidden forms are AJAX forms that display on a toggle</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -369,6 +426,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/04/ajax-forms/">AJAX Forms</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/05/21/rails-v-javascript/">The Web…What Is This !$@%ing Mess?</a>
       </li>
     
@@ -382,10 +443,6 @@
     
       <li class="post">
         <a href="/blog/2015/04/14/the-flatiron-method/">The Flatiron Method</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/04/05/my-first-post-on-octopress/">My First Post on Octopress</a>
       </li>
     
   </ul>
